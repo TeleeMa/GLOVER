@@ -1,0 +1,11 @@
+deepspeed --include localhost:2 --master_port=20983 train_ds.py \
+  --version="/path/to/GLOVER++" \
+  --dataset_dir='/path/to/HOVA-500K/datasets' \
+  --dataset="3doi||ego4d||epic100||handal" \
+  --sample_rates="1,1,1,1" \
+  --exp_name="glover" \
+  --lr=0.00005 \
+  --epochs=5 \
+  --batch_size=4 \
+  --steps_per_epoch=3000 \
+  --ce_loss_weight=0.01

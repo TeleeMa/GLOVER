@@ -1,0 +1,17 @@
+deepspeed --include localhost:1 --master_port=23914 train_glover_plus.py \
+  --version="/path/to/GLOVER++" \
+  --dataset_dir='/path/to/HOVA-500K/datasets' \
+  --dataset="3doi||ego4d||epic100||handal" \
+  --sample_rates="1,1,1,1" \
+  --exp_name="glover++" \
+  --lr=0.0005 \
+  --epochs=5 \
+  --batch_size=16 \
+  --steps_per_epoch=188 \
+  --ce_loss_weight=0.0 \
+  --use_text_emb_in_suffix_sam \
+  --aff_type="mp" \
+  --kl_loss_weight=0.1 \
+  --train_firs_mask_decoder \
+  --use_diff_lr \
+  --lr_ratio=0.1
