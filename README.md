@@ -1,7 +1,7 @@
 # GLOVER++: Unleashing the Potential of Affordance Learning from Human Behaviors for Robotic Manipulation
 
 ## Abstract
-For more details, please refer to the [paper]().
+For more details, please refer to the [paper](https://arxiv.org/pdf/2505.11865).
 
 ## Highlights
 
