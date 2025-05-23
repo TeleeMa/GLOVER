@@ -29,7 +29,7 @@ import pdb
 
 
 def parse_args(args):
-    parser = argparse.ArgumentParser(description="GLOVER Model Training")
+    parser = argparse.ArgumentParser(description="GLOVER++ Model Training")
     parser.add_argument("--local_rank", default=0, type=int, help="node rank")
     parser.add_argument("--version", default="/path/to/LISA_Plus_7b")
     parser.add_argument("--vis_save_path", default="./vis_output", type=str)
