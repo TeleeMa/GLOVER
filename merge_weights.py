@@ -95,7 +95,7 @@ def main(args):
 
     if args.model_arch == "GLOVER++":
         from model.GLOVER_plus import GloverForCausalLM
-    elif args.model_arch == "GLVOER":
+    elif args.model_arch == "GLOVER":
         from model.GLOVER import GloverForCausalLM
     else:
         raise ValueError(f"Unsupported model architecture: {args.model_arch}")
