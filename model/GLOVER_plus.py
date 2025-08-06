@@ -429,7 +429,7 @@ class GloverForCausalLM(LlavaLlamaForCausalLM):
         use_text_emb_in_suffix_sam: bool = False,
     ):
         with torch.no_grad():
-            outputs, _ = self.generate(
+            outputs = self.generate(
                 images=images_clip,
                 input_ids=input_ids,
                 max_new_tokens=max_new_tokens,

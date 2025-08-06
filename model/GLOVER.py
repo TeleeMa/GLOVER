@@ -396,7 +396,7 @@ class GloverForCausalLM(LlavaLlamaForCausalLM):
         tokenizer=None,
     ):
         with torch.no_grad():
-            outputs, ok = self.generate(
+            outputs = self.generate(
                 images=images_clip,
                 input_ids=input_ids,
                 max_new_tokens=max_new_tokens,
@@ -407,8 +407,7 @@ class GloverForCausalLM(LlavaLlamaForCausalLM):
 
             output_hidden_states = outputs.hidden_states[-1]
             output_ids = outputs.sequences
-            if ok == False:
-                return output_ids, None
+
             seg_token_mask = output_ids[:, 1:] == self.seg_token_idx
             seg_token_mask = torch.cat(
                 [
